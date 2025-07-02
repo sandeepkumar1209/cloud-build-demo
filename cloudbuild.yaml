@@ -10,8 +10,4 @@ steps:
     entrypoint: gcloud
     args: ['run', 'deploy', 'myfirstrun', '--image', 'gcr.io/devsecops-3-tier-463414/my-image', '--region', 'asia-south1', '--allow-unauthenticated']
 images:
-  'gcr.io/devsecops-3-tier-463414/my-image'
-
-
-
-
+  - 'gcr.io/devsecops-3-tier-463414/my-image'
