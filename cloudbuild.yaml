@@ -1,16 +1,16 @@
 steps:
   #Build the container Image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/devsecops-3-tier-463414/my-image', '.']
+    args: ['build', '-t', 'gcr.io/high-splicer-476515-s0/my-image', '.']
   #Push the container Image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/devsecops-3-tier-463414/my-image']
+    args: ['push', 'gcr.io/high-splicer-476515-s0/my-image']
   #Deploy container Image to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
-    args: ['run', 'deploy', 'myfirstrun', '--image', 'gcr.io/devsecops-3-tier-463414/my-image', '--region', 'asia-south1', '--allow-unauthenticated']
+    args: ['run', 'deploy', 'myfirstrun', '--image', 'gcr.io/high-splicer-476515-s0/my-image', '--region', 'asia-south1', '--allow-unauthenticated']
 images:
-  - 'gcr.io/devsecops-3-tier-463414/my-image'
+  - 'gcr.io/high-splicer-476515-s0/my-image'
 options:
   logging: CLOUD_LOGGING_ONLY
 
