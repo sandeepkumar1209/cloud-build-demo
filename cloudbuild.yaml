@@ -8,7 +8,7 @@ steps:
   #Deploy container Image to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
-    args: ['run', 'deploy', 'myfirstrun', '--image', 'gcr.io/high-splicer-476515-s0/my-image', '--region', 'asia-south1', '--allow-unauthenticated']
+    args: ['run', 'deploy', 'myfirstrun', '--image', 'gcr.io/high-splicer-476515-s0/my-image', '--region', 'asia-south1','--platform', 'managed', '--allow-unauthenticated']
 images:
   - 'gcr.io/high-splicer-476515-s0/my-image'
 options:
